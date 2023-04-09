@@ -49,14 +49,10 @@ def merge_sort(list):
                 print("[WARN] Please Type Either 1 Or 2 To Indicate Your Preference.")
 
     # append the remaining elements of the left list, if any, to the merged list
-    while i < len(left):
-        merged.append(left[i])
-        i += 1
+    merged.extend(left[i:])
 
     # append the remaining elements of the right list, if any, to the merged list
-    while j < len(right):
-        merged.append(right[j])
-        j += 1
+    merged.extend(right[j:])
 
     # return the merged and sorted list
     return merged
